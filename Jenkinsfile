@@ -1,29 +1,29 @@
 pipeline {
     agent any
-    
+
     tools {
-        nodejs "NodeJS"
+        nodejs 'NodeJS'
     }
-  
+
     stages {
-        stage("install") {
+        stage("Install Dependencies") {
             steps {
-                sh 'npm install'
+                sh 'node --no-warnings $(which npm) install'
             }
         }
-        stage("build") {
+        stage("Build Project") {
             steps {
-                sh 'npm run build'
+                sh 'node --no-warnings $(which npm) run build'
             }
         }
-    } 
-    
+    }
+
     post {
         success {
-            echo "SUCCESSFUL"
+            echo 'SUCCESSFUL'
         }
         failure {
-            echo "FAILED"
+            echo 'FAILED'
         }
     }
 }
