@@ -1,16 +1,13 @@
+
 {
   "name": "jenkins-nextjs",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": ">=14.x"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "test": "jest" // Nếu bạn sử dụng Jest cho testing
+    "lint": "next lint"
   },
   "dependencies": {
     "@types/node": "18.16.3",
@@ -25,8 +22,5 @@
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
-  },
-  "devDependencies": {
-    "jest": "^28.0.0" // Ví dụ cho thư viện testing
   }
 }
