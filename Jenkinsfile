@@ -5,6 +5,10 @@ pipeline {
         nodejs 'NodeJS'
     }
 
+    environment {
+        NODE_NO_WARNINGS = '1' // Vô hiệu hóa cảnh báo Node.js
+    }
+
     stages {
         stage("Install Dependencies") {
             steps {
